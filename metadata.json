@@ -1,0 +1,5 @@
+{
+  "name": "Aura Music",
+  "description": "A dark, atmospheric music streaming platform similar to Spotify or Yandex Music.",
+  "requestFramePermissions": []
+}

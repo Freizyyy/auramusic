@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-bg-base: var(--bg-base);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-highlight: var(--bg-highlight);
+  --color-bg-press: var(--bg-press);
+  
+  --color-text-base: var(--text-base);
+  --color-text-subdued: var(--text-subdued);
+  --color-border-subdued: var(--border-subdued);
+  
+  --color-player-bg: var(--player-bg);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-card-bg: var(--card-bg);
+  --color-card-hover: var(--card-hover);
+  --color-btn-primary-bg: var(--btn-primary-bg);
+  --color-btn-primary-text: var(--btn-primary-text);
+  --color-progress-bg: var(--progress-bg);
+  --color-progress-fg: var(--progress-fg);
+  --color-icon-subdued: var(--icon-subdued);
+  --color-icon-hover: var(--icon-hover);
+  --color-nav-btn-bg: var(--nav-btn-bg);
+  --color-nav-btn-text: var(--nav-btn-text);
+  --color-nav-btn-hover: var(--nav-btn-hover);
+  
+  --color-accent: #1db954;
+  --color-accent-hover: #1ed760;
+}
+
+:root {
+  --bg-base: #ffffff;
+  --bg-elevated: #f3f4f6;
+  --bg-highlight: #e5e7eb;
+  --bg-press: #d1d5db;
+  --text-base: #000000;
+  --text-subdued: #4b5563;
+  --border-subdued: #e5e7eb;
+  --glass-surface: rgba(0, 0, 0, 0.05);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --player-bg: #ffffff;
+  --sidebar-bg: #f9fafb;
+  --card-bg: #ffffff;
+  --card-hover: #f3f4f6;
+  --btn-primary-bg: #000000;
+  --btn-primary-text: #ffffff;
+  --progress-bg: #e5e7eb;
+  --progress-fg: #000000;
+  --icon-subdued: #6b7280;
+  --icon-hover: #000000;
+  --nav-btn-bg: rgba(0,0,0,0.05);
+  --nav-btn-text: #4b5563;
+  --nav-btn-hover: #000000;
+}
+
+:root.dark {
+  --bg-base: #000000;
+  --bg-elevated: #121212;
+  --bg-highlight: #1a1a1a;
+  --bg-press: #282828;
+  --text-base: #ffffff;
+  --text-subdued: #a7a7a7;
+  --border-subdued: #282828;
+  --glass-surface: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --player-bg: #181818;
+  --sidebar-bg: #000000;
+  --card-bg: #181818;
+  --card-hover: #282828;
+  --btn-primary-bg: #ffffff;
+  --btn-primary-text: #000000;
+  --progress-bg: #4d4d4d;
+  --progress-fg: #ffffff;
+  --icon-subdued: #b3b3b3;
+  --icon-hover: #ffffff;
+  --nav-btn-bg: rgba(0,0,0,0.6);
+  --nav-btn-text: rgba(255,255,255,0.7);
+  --nav-btn-hover: #ffffff;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-base);
+  font-family: var(--font-sans);
+  overflow: hidden; /* Prevent body scroll, handle in layout */
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.glass-panel {
+  background: var(--glass-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+.text-truncate-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
